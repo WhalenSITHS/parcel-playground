@@ -1,0 +1,45 @@
+@import "_variables.scss";
+
+.about {
+  margin: 2rem 1rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  .about-header {
+    font-size: 5rem;
+    margin: 2rem;
+  }
+}
+.about-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 6rem 3rem;
+}
+.about-card {
+  padding: 2rem;
+  height: 40rem;
+  color: black;
+  background-color: white;
+  width: 25rem;
+  border-radius: 10%;
+  i {
+    font-size: 8rem;
+  }
+  .about-card-header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  .about-card-text {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+}
