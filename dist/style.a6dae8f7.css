@@ -1,0 +1,317 @@
+/* .user-gallery {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-gallery-header {
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.user-gallery-gallery {
+  height: 60%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  @include .user-gallery-image {
+    height: 30rem;
+  }
+}
+ */
+.user-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .user-gallery {
+    height: 90vh;
+  }
+}
+
+.user-gallery-header {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  .user-gallery-header {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 900px) {
+  .user-gallery-header {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .user-gallery-header {
+    font-size: 5rem;
+  }
+}
+
+.user-gallery-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .user-gallery-gallery {
+    height: 60%;
+    width: 90%;
+    flex-direction: row;
+  }
+}
+.user-gallery-gallery .user-gallery-image {
+  width: 90%;
+  padding: 1rem;
+}
+@media (min-width: 900px) {
+  .user-gallery-gallery .user-gallery-image {
+    height: 30rem;
+    width: auto;
+  }
+}
+
+.navigation_checkbox {
+  display: none;
+}
+
+.navigation_button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigation_icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.navigation_icon,
+.navigation_icon:before,
+.navigation_icon:after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.navigation_icon::before,
+.navigation_icon::after {
+  content: "";
+}
+
+.navigation_icon::before {
+  position: absolute;
+  top: -0.8rem;
+  left: 0;
+}
+
+.navigation_icon::after {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+}
+
+.navigation_button:hover .navigation_icon::before {
+  top: -1rem;
+}
+
+.navigation_button:hover .navigation_icon::after {
+  top: 1rem;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon {
+  background-color: transparent;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+.navigation_nav {
+  height: 0vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0%;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navigation_background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#2998ff, #28b485);
+  z-index: 1000;
+  transition: transform 0.8s;
+  /*transform: scale(80);*/
+}
+
+.navigation_list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation_item {
+  margin: 1rem;
+}
+
+.navigation_link,
+.navigation_link:link,
+.navigation_link:visited {
+  display: none;
+  /* important for animation */
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 240%;
+  transition: all 0.4s;
+}
+
+.navigation_link:hover,
+.navigation_link:active {
+  background-position: 100%;
+  color: #2998ff;
+  transform: translateX(1rem);
+}
+
+.navigation_checkbox:checked ~ .navigation_background {
+  transform: scale(80);
+}
+
+.navigation_checkbox:checked ~ .navigation_nav {
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+.navigation_checkbox:checked .navigation_link,
+.navigation_link:link,
+.navigation_link:visited {
+  display: inline-block;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #0b0c10;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(69, 162, 158, 0.5), rgba(102, 252, 241, 0.5)), url(/headphones-bg.aacf358d.jpg);
+  background-position: top;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 8vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%);
+}
+.header .text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .heading-primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100vw;
+  text-align: center;
+  font-weight: 700;
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.header .heading-primary .heading-primary-main {
+  font-size: 4rem;
+  text-shadow: 3px 3px #333;
+  width: 80vw;
+  letter-spacing: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .header .heading-primary .heading-primary-main {
+    font-size: 6rem;
+    letter-spacing: 1.8rem;
+  }
+}
+@media (min-width: 900px) {
+  .header .heading-primary .heading-primary-main {
+    font-size: 10rem;
+    letter-spacing: 2.2rem;
+  }
+}
+.header .heading-primary .heading-primary-sub {
+  font-size: 1.5rem;
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+@media (min-width: 900px) {
+  .header .heading-primary .heading-primary-sub {
+    font-size: 3rem;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-200rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

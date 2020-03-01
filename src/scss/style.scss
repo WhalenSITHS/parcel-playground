@@ -1,0 +1,89 @@
+@import "_variables.scss";
+@import "_usergallery.scss";
+@import "_nav.scss";
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  background-color: color(black);
+}
+.header {
+  position: relative;
+  height: 100vh;
+
+  // background-color: rgba(color(primary), 1);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(color(primary), 0.5),
+      rgba(color(primary-light), 0.5)
+    ),
+    url(../media/headphones-bg.jpg);
+  background-position: top;
+  background-size: cover;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 8vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%);
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .heading-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100vw;
+    text-align: center;
+    //text-shadow: 3px 3px 8px #111;
+    font-weight: 700;
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    .heading-primary-main {
+      font-size: 4rem;
+      text-shadow: 3px 3px #333;
+      width: 80vw;
+      letter-spacing: 1rem;
+      text-align: center;
+      margin: 0 auto;
+      @include tablet {
+        font-size: 6rem;
+        letter-spacing: 1.8rem;
+      }
+      @include laptop {
+        font-size: 10rem;
+        letter-spacing: 2.2rem;
+      }
+    }
+    .heading-primary-sub {
+      font-size: 1.5rem;
+      width: 80vw;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-200rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

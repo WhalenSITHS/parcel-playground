@@ -1,0 +1,147 @@
+@import "_variables.scss";
+.navigation_checkbox {
+  display: none;
+}
+
+.navigation_button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+.navigation_icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+.navigation_icon,
+.navigation_icon:before,
+.navigation_icon:after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.navigation_icon::before,
+.navigation_icon::after {
+  content: "";
+}
+.navigation_icon::before {
+  position: absolute;
+  top: -0.8rem;
+  left: 0;
+}
+.navigation_icon::after {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+}
+
+.navigation_button:hover .navigation_icon::before {
+  top: -1rem;
+}
+.navigation_button:hover .navigation_icon::after {
+  top: 1rem;
+}
+.navigation_checkbox:checked + .navigation_button .navigation_icon {
+  background-color: transparent;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+.navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+.navigation_nav {
+  height: 0vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0%;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navigation_background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(
+    rgba(41, 152, 255, 1),
+    rgba(40, 180, 133, 1)
+  );
+  z-index: 1000;
+  transition: transform 0.8s;
+  /*transform: scale(80);*/
+}
+
+.navigation_list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation_item {
+  margin: 1rem;
+}
+
+.navigation_link,
+.navigation_link:link,
+.navigation_link:visited {
+  display: none; /* important for animation */
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    white 50%
+  );
+  background-size: 240%;
+  transition: all 0.4s;
+}
+
+.navigation_link:hover,
+.navigation_link:active {
+  background-position: 100%;
+  color: rgba(41, 152, 255, 1);
+  transform: translateX(1rem);
+}
+
+.navigation_checkbox:checked ~ .navigation_background {
+  transform: scale(80);
+}
+
+.navigation_checkbox:checked ~ .navigation_nav {
+  opacity: 1;
+  height: 100vh;
+
+  width: 100%;
+}
+.navigation_checkbox:checked .navigation_link,
+.navigation_link:link,
+.navigation_link:visited {
+  display: inline-block;
+}
