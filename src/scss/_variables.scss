@@ -2,6 +2,9 @@ $laptop: 900px;
 $desktop: 1100px;
 $tablet: 600px;
 
+$phoneMax: 600px;
+$laptopMax: 1100px;
+$tabletMax: 900px;
 @mixin laptop {
   @media (min-width: #{$laptop}) {
     @content;
@@ -18,7 +21,28 @@ $tablet: 600px;
     @content;
   }
 }
+@mixin phone {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
 
+@mixin laptopMax {
+  @media (max-width: #{$laptopMax}) {
+    @content;
+  }
+}
+
+@mixin tabletMax {
+  @media (max-width: #{$tabletMax}) {
+    @content;
+  }
+}
+@mixin phoneMax {
+  @media (max-width: #{$phoneMax}) {
+    @content;
+  }
+}
 $colors: (
   primary: #45a29e,
   primary-light: #66fcf1,

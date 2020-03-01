@@ -207,6 +207,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // You can also use <link> for styles
 // ..
 _aos.default.init();
+
+var checkBox = document.querySelector(".navigation_checkbox");
+var links = document.querySelectorAll(".navigation_link");
+var linkarr = Array.from(links);
+linkarr.forEach(function (el) {
+  return el.addEventListener("click", function () {
+    checkBox.checked = false;
+  });
+});
 },{"aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -235,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51000" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

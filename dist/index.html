@@ -21,7 +21,10 @@
               <a href="#" class="navigation_link">Home</a>
             </li>
             <li class="navigation_item">
-              <a href="#user-gallery" class="navigation_link">What We Do</a>
+              <a href="#about" class="navigation_link">What We Do</a>
+            </li>
+            <li class="navigation_item">
+              <a href="#reviews" class="navigation_link">What our clients say</a>
             </li>
           </ul>
         </ul>
@@ -37,20 +40,22 @@
     </header>
 
     <section class="user-gallery">
-      <h1 class="user-gallery-header">
+      <h1 class="user-gallery-header" data-aos="zoom-in">
         Anywhere you need to be
       </h1>
       <div class="user-gallery-gallery">
-        <img data-aos="fade-right" src="/headphones-1.791db6ec.jpg" alt="" class="user-gallery-image">
-        <img data-aos="fade-up" src="/record.77cbcf51.jpg" alt="" class="user-gallery-image">
-        <img data-aos="fade-left" src="/headphones-2.1d78183f.jpg" alt="" class="user-gallery-image">
+        <img data-aos="fade-right" src="/headphones-1.791db6ec.jpg" alt="" class="user-gallery-image" id="image-hover-1">
+        <img data-aos="fade-up" src="/record.77cbcf51.jpg" alt="" class="user-gallery-image" id="image-hover-2">
+        <img data-aos="fade-left" src="/headphones-2.1d78183f.jpg" alt="" class="user-gallery-image" id="image-hover-3">
       </div>
     </section>
 
-    <section class="about">
-      <h1 class="about-header">What We Do</h1>
+    <section class="about" id="about">
+      <div class="overlay" data-aos="zoom-out"></div>
+      <video src="/engineer.9b216d48.mp4" autoplay="" loop="" muted="" data-aos="zoom-out"></video>
+      <h1 class="about-header" data-aos="fade-left">What We Do</h1>
       <div class="about-gallery">
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" id="card-hover-1">
           <i class="material-icons icon-test">tablet_mac</i>
           <h2 class="about-card-header">Mobile</h2>
           <p class="about-card-text">
@@ -59,7 +64,7 @@
             generation sound technology that fits in the palm of your hand
           </p>
         </div>
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" id="card-hover-2">
           <i class="material-icons icon-test">videogame_asset</i>
           <h2 class="about-card-header">Gaming</h2>
           <p class="about-card-text">
@@ -67,7 +72,7 @@
             number one preferred peripheral among professional gamers
           </p>
         </div>
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" id="card-hover-3">
           <i class="material-icons icon-test">headset</i>
           <h2 class="about-card-header">Audio</h2>
           <p class="about-card-text">
@@ -76,7 +81,7 @@
             the music you listen to.
           </p>
         </div>
-        <div class="about-card">
+        <div class="about-card" data-aos="zoom-in" id="card-hover-4">
           <i class="material-icons icon-test">movie_filter</i>
           <h2 class="about-card-header">Cinema</h2>
           <p class="about-card-text">

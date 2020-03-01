@@ -8,9 +8,26 @@
   align-items: center;
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 3;
+  @include tabletMax {
+    height: auto;
+  }
+
   .about-header {
-    font-size: 5rem;
+    font-size: 8rem;
     margin: 2rem;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-shadow: 3px 3px #333;
+    @include laptopMax {
+      font-size: 6rem;
+      margin: 1.5rem;
+    }
+    @include tabletMax {
+      font-size: 4rem;
+    }
   }
 }
 .about-gallery {
@@ -20,20 +37,35 @@
   justify-content: space-between;
   width: 80%;
   margin: 6rem 3rem;
+  @include laptopMax {
+  }
+  @include tabletMax {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .about-card {
   padding: 2rem;
   height: 40rem;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgba(color(primary-light), 0.3);
   width: 25rem;
   border-radius: 10%;
+  z-index: 4;
+  @include tabletMax {
+    width: 60%;
+    height: auto;
+    border-radius: 0;
+  }
   i {
     font-size: 8rem;
+    color: white;
+    text-shadow: 3px 3px #333;
   }
   .about-card-header {
     font-size: 2.5rem;
     text-transform: uppercase;
+    text-shadow: 3px 3px #333;
   }
   .about-card-text {
     font-size: 1.5rem;
@@ -42,4 +74,29 @@
     font-weight: 500;
     letter-spacing: 0.1rem;
   }
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: rgba(color(primary-light), 0.3);
+}
+#card-hover-1:hover,
+#card-hover-2:hover,
+#card-hover-3:hover,
+#card-hover-4:hover {
+  transform: translateY(-1rem);
 }
