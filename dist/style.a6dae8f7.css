@@ -362,6 +362,61 @@ video {
   transform: translateY(-1rem);
 }
 
+.reviews {
+  height: 95vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews-header {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.review-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.review-review {
+  color: white;
+  height: 32rem;
+  width: 25%;
+  margin: 2rem;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(to right bottom, rgba(69, 162, 158, 0.5), rgba(102, 252, 241, 0.5)), url(/dark.e47bd88b.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+
+.review-grow {
+  flex-grow: 2;
+}
+
+.review-human {
+  height: 22rem;
+  border-radius: 50%;
+}
+
+.caption {
+  color: white;
+  background-color: rgba(17, 17, 17, 0.5);
+  padding: 0.3rem;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -387,6 +442,7 @@ html {
 
 body {
   background-color: #0b0c10;
+  margin: 0;
 }
 
 .header {
@@ -415,7 +471,6 @@ body {
   width: 100vw;
   text-align: center;
   font-weight: 700;
-  animation-name: slide-in;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
@@ -459,6 +514,14 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+#svg-header path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+
+#svg-header {
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
