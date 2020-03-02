@@ -3,8 +3,8 @@ $desktop: 1100px;
 $tablet: 600px;
 
 $phoneMax: 600px;
-$laptopMax: 1100px;
-$tabletMax: 900px;
+$laptopMax: 1300px;
+$tabletMax: 1024px;
 @mixin laptop {
   @media (min-width: #{$laptop}) {
     @content;
