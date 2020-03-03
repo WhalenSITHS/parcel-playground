@@ -47,12 +47,16 @@
 
 .review-grow {
   flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .review-human {
   height: 22rem;
   border-radius: 50%;
 }
+
 .caption {
   color: white;
   background-color: rgba(#111, 0.5);
