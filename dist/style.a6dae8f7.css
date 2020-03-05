@@ -509,6 +509,7 @@ video {
 @media (max-width: 1024px) {
   .transition-gallery {
     padding: 1rem;
+    justify-content: center;
   }
 }
 @media (max-width: 600px) {
@@ -533,7 +534,7 @@ video {
 }
 @media (max-width: 1024px) {
   .transition-text {
-    width: 47%;
+    width: 40%;
   }
 }
 @media (max-width: 600px) {
