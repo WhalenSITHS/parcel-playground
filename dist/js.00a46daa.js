@@ -45478,15 +45478,52 @@ var fill = (0, _animeEs.default)({
   direction: "alternate",
   loop: true
 });
-new _hoverEffect.default({
+var trans = new _hoverEffect.default({
   parent: document.querySelector(".transition-image"),
   intensity1: 0.1,
   intensity2: 0.1,
+  hover: true,
   angle2: Math.PI / 2,
   image1: require("../media/trans-1.jpg"),
   image2: require("../media/trans-2.jpg"),
   displacementImage: "https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true"
 });
+
+var test2 = function test2() {
+  var transH3 = document.querySelector(".transition-h3");
+
+  var transH3First = function transH3First() {
+    transH3.textContent === "Whether It's Just You";
+  };
+
+  var transH3Second = function transH3Second() {
+    transH3.textContent === "Or An Entire Team";
+  };
+
+  if (transH3.textContent === "Whether It's Just You") {
+    setTimeout(function () {
+      transH3.textContent = "Or An Entire Team"; //trans.next();
+    }, 2000);
+  } else {
+    setTimeout(function () {
+      // trans.previous();
+      transH3.textContent = "Whether It's Just You";
+    }, 2000);
+  }
+};
+
+test2();
+/* const text2 = `Or An Entire Team`;
+const text1 = `Whether It's Just You`;
+
+const h3Arr = [text1, text2];
+const changeText = async function() {
+  const transH3 = document.querySelector(".transition-h3");
+  if (transH3.textContent === h3Arr[0]) {
+    await time;
+  }
+};
+ */
 },{"aos":"../node_modules/aos/dist/aos.js","animejs/lib/anime.es.js":"../node_modules/animejs/lib/anime.es.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css","hover-effect":"../node_modules/hover-effect/dist/hover-effect.es.js","../media/trans-1.jpg":"media/trans-1.jpg","../media/trans-2.jpg":"media/trans-2.jpg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -45515,7 +45552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55309" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52486" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
