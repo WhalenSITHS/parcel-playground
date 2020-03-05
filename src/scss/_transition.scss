@@ -1,0 +1,87 @@
+@import "_variables.scss";
+
+.transition {
+  height: 95vh;
+  margin: 5rem auto;
+  color: white;
+  @include laptopMax {
+    margin: 10rem auto;
+  }
+}
+.transition-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70vh;
+  margin: 1rem auto;
+  padding: 3rem;
+  width: 85%;
+  text-align: center;
+  @include laptopMax {
+    width: 85%;
+  }
+  @include tabletMax {
+    padding: 1rem;
+    justify-content: center;
+  }
+  @include phoneMax {
+    flex-direction: column;
+    height: 90vh;
+  }
+}
+.transition-text {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 45%;
+  @include laptopMax {
+    width: 40%;
+  }
+  @include tabletMax {
+    width: 40%;
+  }
+  @include phoneMax {
+    width: 90%;
+  }
+}
+.transition-text-header {
+  font-size: 5rem;
+  text-transform: uppercase;
+  @include tabletMax {
+    font-size: 3.5rem;
+  }
+}
+.transition-text-caption {
+  font-size: 2rem;
+  width: 80%;
+  margin: 1rem auto;
+  @include tabletMax {
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+
+.transition-image {
+  flex-grow: 2;
+
+  position: relative;
+  @include laptopMax {
+    flex-grow: 0;
+    width: 50%;
+  }
+  @include phoneMax {
+    height: 100%;
+    margin: 1 auto;
+    flex-grow: 1;
+  }
+}
+
+.transition-overlay {
+  background-color: rgba(color(primary-light), 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
