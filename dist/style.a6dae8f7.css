@@ -420,6 +420,18 @@ video {
   padding: 0.3rem;
 }
 
+.transition {
+  height: 95vh;
+  width: 90vw;
+}
+.transition .transition-gallery {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 html {
   margin: 0;
   padding: 0;
