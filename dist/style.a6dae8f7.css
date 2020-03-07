@@ -591,6 +591,11 @@ video {
   height: 100%;
 }
 
+.model {
+  height: 100vh;
+  background-color: white;
+}
+
 html {
   margin: 0;
   padding: 0;
