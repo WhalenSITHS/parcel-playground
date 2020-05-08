@@ -1934,7 +1934,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/three/build/three.module.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/hover-effect/node_modules/three/build/three.module.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45433,7 +45433,7 @@ function _default(v) {
     });
   }
 }
-},{"three":"../node_modules/three/build/three.module.js","gsap/TweenMax":"../node_modules/gsap/TweenMax.js"}],"media/trans-1.jpg":[function(require,module,exports) {
+},{"three":"../node_modules/hover-effect/node_modules/three/build/three.module.js","gsap/TweenMax":"../node_modules/gsap/TweenMax.js"}],"media/trans-1.jpg":[function(require,module,exports) {
 module.exports = "/trans-1.a22b5a15.jpg";
 },{}],"media/trans-2.jpg":[function(require,module,exports) {
 module.exports = "/trans-2.175019a2.jpg";
@@ -45515,7 +45515,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63426" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51466" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
