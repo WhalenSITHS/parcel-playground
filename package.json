@@ -13,10 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.2"
+    "sass": "^1.32.5"
   },
   "dependencies": {
-    "animejs": "^3.1.0",
+    "@babel/compat-data": "^7.12.7",
+    "animejs": "^3.2.1",
     "aos": "^3.0.0-beta.6",
     "hover-effect": "^1.1.0"
   }
